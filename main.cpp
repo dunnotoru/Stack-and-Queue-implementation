@@ -8,36 +8,6 @@
 #include "ArrayQueue.h"
 #include "Map.h"
 
-
-
-void Task_1() {
-	int size = 1000000;
-
-	unsigned int start_time = clock();
-	ListStackDemo(size);
-	unsigned int end_time = clock();
-	int duration_ms = end_time - start_time;
-	std::cout << "ListStack: " << duration_ms << " ms" << std::endl;
-
-	start_time = clock();
-	ArrayStackDemo(size);
-	end_time = clock();
-	duration_ms = end_time - start_time;
-	std::cout << "ArrayStack: " << duration_ms << " ms" << std::endl;
-
-	start_time = clock();
-	ListQueueDemo(size);
-	end_time = clock();
-	duration_ms = end_time - start_time;
-	std::cout << "ListQueue: " << duration_ms << " ms" << std::endl;
-
-	start_time = clock();
-	ArrayQueueDemo(size);
-	end_time = clock();
-	duration_ms = end_time - start_time;
-	std::cout << "ArrayQueue: " << duration_ms << " ms" << std::endl;
-}
-
 void ListStackDemo(int size) {
 	ListStack* stack = new ListStack();
 
@@ -51,7 +21,6 @@ void ListStackDemo(int size) {
 		stack->pop();
 	}
 }
-
 void ListQueueDemo(int size) {
 	ListQueue* queue = new ListQueue();
 
@@ -65,7 +34,6 @@ void ListQueueDemo(int size) {
 		queue->dequeue();
 	}
 }
-
 void ArrayStackDemo(int size) {
 	ArrayStack* stack = new ArrayStack(size);
 	
@@ -79,7 +47,6 @@ void ArrayStackDemo(int size) {
 		stack->pop();
 	}
 }
-
 void ArrayQueueDemo(int size) {
 	ArrayQueue* queue = new ArrayQueue(size);
 

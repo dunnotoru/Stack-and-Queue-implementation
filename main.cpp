@@ -158,6 +158,38 @@ void QueueComparison() {
 	std::cout << "ArrayQueue: " << duration_ms << " ms" << std::endl;
 }
 
+void MapTest() {
+	Map* map = new Map(26);
+	while (true) {
+		std::cout << "Map Contains:" << std::endl;
+		map->print();
+
+		std::string buffer;
+		char key;
+		int value;
+		try {
+			std::cout << "Input key-value pair (char [A-Z], int):" << std::endl;
+			std::cout << "key => ";
+			std::cin >> buffer;
+
+			key = buffer[0];
+			if (buffer.size() != 1 || key < 'A' || key > 'Z')
+				throw "invalid key";
+
+			std::cout << "value => ";
+			std::cin >> buffer;
+			value = std::stoi(buffer);
+
+			map->set(key, value);
+		}
+		catch (...) {
+			std::cout << "Error." << std::endl;
+			return;
+		}
+	}
+
+}
+
 bool menu() {
 	std::cout << R"(
 [1] - stack comparison
@@ -180,6 +212,7 @@ bool menu() {
 		QueueComparison();	
 		break;
 	case '3':
+		MapTest();
 		break;
 	case 'q':
 		return false;

@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="algos_lab1.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ArrayQueue.cpp" />
     <ClCompile Include="ArrayStack.cpp" />
     <ClCompile Include="ListQueue.cpp" />
@@ -135,7 +135,7 @@
     <ClCompile Include="Map.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="algos_lab1.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="ArrayQueue.h" />
     <ClInclude Include="ArrayStack.h" />
     <ClInclude Include="ListQueue.h" />
